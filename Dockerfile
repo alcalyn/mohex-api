@@ -24,4 +24,8 @@ RUN cd /tmp \
 RUN mkdir /app && cd /app
 WORKDIR /app
 
+COPY . /app
+
+RUN yarn install
+
 CMD ["yarn", "start"]
